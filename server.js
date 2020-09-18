@@ -1,8 +1,11 @@
 /* Exterenal Modules */
 const express = require("express");
 const app = express();
-
+const methodOverride = require("method-override");
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 /* Internal Modules */
+const db = require("./models");
 
 /* Instanced Modules */
 
