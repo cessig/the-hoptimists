@@ -9,8 +9,10 @@
   "author": "Corey Essig cessig4161994@gmail.com Rodrigo Marron romarron01@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "connect-mongo": "^3.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.10.6"
   }
