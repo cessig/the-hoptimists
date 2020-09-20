@@ -21,4 +21,6 @@ mongoose.connection.on("disconnect", function (event) {
   console.log("Mongodb disconnected", event);
 });
 
-module.exports = {};
+module.exports = {
+  Beer: require("./Beer"),
+};
