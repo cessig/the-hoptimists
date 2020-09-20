@@ -63,6 +63,21 @@ router.get("/:id/edit", function (req, res) {
 });
 
 // update
+router.put("/:id", function (req, res) {
+  db.Brewery.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    function (error, updatedBrewery) {
+      if (error) {
+        console.log(error);
+        return res.send(error);
+      }
+
+      res.redirect(`/breweries/${updatedBrewery._id}`);
+    }
+  );
+});
 
 // delete
 
