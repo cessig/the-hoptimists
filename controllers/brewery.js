@@ -51,6 +51,16 @@ router.get("/:id", function (req, res) {
 });
 
 // edit
+router.get("/:id/edit", function (req, res) {
+  db.Brewery.findById(req.params.id, function (error, foundBrewery) {
+    if (error) {
+      console.log(error);
+      return res.send(error);
+    }
+    const context = { brewery: foundBrewery };
+    res.render("brewery/edit", context);
+  });
+});
 
 // update
 
