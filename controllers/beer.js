@@ -42,10 +42,10 @@ router.post("/", function (req, res) {
         console.log(error);
         return res.send(error);
       }
+      console.log(foundBrewery);
       foundBrewery.beers.push(createdBeer);
       foundBrewery.save;
 
-      res.send("This worked");
       res.redirect("/beers");
     });
   });
