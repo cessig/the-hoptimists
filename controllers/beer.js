@@ -77,7 +77,18 @@ router.get("/:id/edit", function (req, res) {
 });
 
 // update
-
+router.put("/:id", function (req, res) {
+  db.Beer.findByIdAndUpdate(req.params.id, req.body, { new: true }, function (
+    error,
+    updatedBeer
+  ) {
+    if (error) {
+      console.log(error);
+      return res.send(error);
+    }
+    res.redirect(`/beers/${updatedBeer._id}`);
+  });
+});
 // delete
 
 module.exports = router;
