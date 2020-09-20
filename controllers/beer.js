@@ -30,6 +30,26 @@ router.get("/new", function (req, res) {
 });
 
 // create
+router.post("/", function (req, res) {
+  console.log(req.body);
+  db.Beer.create(req.body, function (error, createdBeer) {
+    if (error) {
+      console.log(error);
+      return res.send(error);
+    }
+    db.Brewery.findById(req.body.brewery, function (error, foundBrewery) {
+      if (error) {
+        console.log(error);
+        return res.send(error);
+      }
+      foundBrewery.beers.push(createdBeer);
+      foundBrewery.save;
+
+      res.send("This worked");
+      res.redirect("/beers");
+    });
+  });
+});
 
 // show
 

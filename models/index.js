@@ -23,4 +23,5 @@ mongoose.connection.on("disconnect", function (event) {
 
 module.exports = {
   Beer: require("./Beer"),
+  Brewery: require("./Brewery"),
 };
