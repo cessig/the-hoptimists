@@ -80,5 +80,24 @@ router.put("/:id", function (req, res) {
 });
 
 // delete
+router.delete("/:id", function (req, res) {
+  db.Brewery.findByIdAndDelete(req.params.id, function (error, deletedBrewery) {
+    if (error) {
+      console.log(error);
+      return res.send(error);
+    }
+
+    db.Beer.remove({ brewery: deletedBrewery._id }, function (
+      error,
+      removedBeers
+    ) {
+      if (error) {
+        console.log(error);
+        return res.send(error);
+      }
+      res.redirect("/breweries");
+    });
+  });
+});
 
 module.exports = router;
