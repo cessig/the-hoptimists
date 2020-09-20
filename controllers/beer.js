@@ -90,5 +90,21 @@ router.put("/:id", function (req, res) {
   });
 });
 // delete
+router.delete("/:id", function (req, res) {
+  db.Beer.findByIdAndDelete(req.params.id, function (error, deletedBeer) {
+    if (error) {
+      console.log(error);
+      return res.send(error);
+    }
+    db.Beer.findById(deletedBeer.brewery, function (error, foundBrewery) {
+      if (error) {
+        console.log(error);
+        return res.send(error);
+      }
+      foundBrewery.beer.remove(deletedBeer);
+      foundBrewery.save();
+    });
+  });
+});
 
 module.exports = router;
