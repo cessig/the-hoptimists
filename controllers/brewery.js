@@ -19,7 +19,7 @@ router.get("/", function (req, res) {
 });
 
 // new
-router.get("new", function (req, res) {
+router.get("/new", function (req, res) {
   res.render("brewery/new");
 });
 
@@ -87,7 +87,7 @@ router.delete("/:id", function (req, res) {
       return res.send(error);
     }
 
-    db.Beer.remove({ brewery: deletedBrewery._id }, function (
+    db.Beer.deleteOne({ brewery: deletedBrewery._id }, function (
       error,
       removedBeers
     ) {
