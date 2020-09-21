@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/styles/main.css" />
     <script src="/public/scripts/app.js" defer></script>
-    <title>Document</title>
+    <title>New beer</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <h1>The Hoptimists</h1>
+      <h3>
+        <a href="/breweries">Back to the Breweries</a>
+      </h3>
+    </nav>
+    <main>
+      <form action="/beers" method="POST">
+        <input type="text" name="name" placeholder="Beer Name" /> <br />
+        <input type="text" name="style" placeholder="Beer Style" /> <br />
+        <input type="text" name="notes" placeholder="Tasting Notes" /> <br />
+        <input type="number" name="rating" placeholder="Rating (1-10)" /> <br />
+      </form>
+    </main>
+  </body>
 </html>
