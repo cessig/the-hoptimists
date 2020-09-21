@@ -18,11 +18,11 @@ router.get("/", function (req, res) {
 
 // new
 router.get("/new", function (req, res) {
-  db.Beer.find({}, function (error, foundBeers) {
+  db.Brewery.find({}, function (error, foundBreweries) {
     if (error) return res.send(error);
 
     const context = {
-      beers: foundBeers,
+      breweries: foundBreweries,
     };
 
     res.render("beer/new", context);
@@ -42,11 +42,12 @@ router.post("/", function (req, res) {
         console.log(error);
         return res.send(error);
       }
+
       console.log(foundBrewery);
       foundBrewery.beers.push(createdBeer);
       foundBrewery.save();
 
-      res.redirect("/beers");
+      res.redirect("/breweries");
     });
   });
 });
@@ -96,12 +97,12 @@ router.delete("/:id", function (req, res) {
       console.log(error);
       return res.send(error);
     }
-    db.Beer.findById(deletedBeer.brewery, function (error, foundBrewery) {
+    db.Brewery.findById(deletedBeer.brewery, function (error, foundBrewery) {
       if (error) {
         console.log(error);
         return res.send(error);
       }
-      foundBrewery.beer.deleteOne(deletedBeer);
+      foundBrewery.beers.deleteOne(deletedBeer);
       foundBrewery.save();
 
       res.redirect("/beers");
