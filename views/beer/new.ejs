@@ -21,6 +21,15 @@
         <input type="text" name="notes" placeholder="Tasting Notes" /> <br />
         <input type="number" name="rating" placeholder="Rating (1-10)" /> <br />
         <input type="submit" value="Submit" />
+        <p>
+          <select name="brewery">
+            <option default>Select a Brewery</option>
+            <% breweries.forEach(brewery => { %>
+            <option value="<%= brewery._id %> "><%= brewery.name %></option>
+            <% }) %>
+          </select>
+          <input type="submit" value="Create Beer" />
+        </p>
       </form>
     </main>
   </body>

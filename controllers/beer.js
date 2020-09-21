@@ -18,11 +18,11 @@ router.get("/", function (req, res) {
 
 // new
 router.get("/new", function (req, res) {
-  db.Beer.find({}, function (error, foundBeers) {
+  db.Beer.find({}, function (error, foundBrewery) {
     if (error) return res.send(error);
 
     const context = {
-      beers: foundBeers,
+      breweries: foundBrewery,
     };
 
     res.render("beer/new", context);
@@ -42,6 +42,7 @@ router.post("/", function (req, res) {
         console.log(error);
         return res.send(error);
       }
+
       console.log(foundBrewery);
       foundBrewery.beers.push(createdBeer);
       foundBrewery.save();

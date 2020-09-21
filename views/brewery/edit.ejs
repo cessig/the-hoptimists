@@ -3,28 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="/public/styles/main.css" />
     <script src="/public/scripts/app.js" defer></script>
-    <title>Update Brewery</title>
+    <title class="container">Update Brewery</title>
   </head>
   <body>
     <header>
-      <nav>
-        <h1>Welcome to the Hoptimists</h1>
-        <ul>
-          <li>
-            <a href="/breweries">Home</a>
-          </li>
-          <li>
-            <a href="/breweries"></a>
-          </li>
-        </ul>
-      </nav>
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container">
+            <nav>
+              <h1 class="title">Welcome to the Hoptimists</h1>
+              <ul>
+                <li>
+                  <a href="/breweries">Home</a>
+                </li>
+                <li>
+                  <a href="/breweries"></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
     </header>
     <main>
       <h2>Edit <%= brewery.name %></h2>
       <form action="/breweries/<%= brewery._id%>?_method=PUT" method="POST">
-        <input type="text" name="name" value="<%= brewery.name %> " />
+        <input
+          class="input"
+          type="text"
+          name="name"
+          value="<%= brewery.name %>
+        "
+        />
       </form>
     </main>
   </body>
