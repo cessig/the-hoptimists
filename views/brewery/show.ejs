@@ -5,7 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/styles/main.css" />
     <script src="/public/scripts/app.js" defer></script>
-    <title>Document</title>
+    <title>Show</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <h1>The Hoptimists</h1>
+      <ul>
+        <li>
+          <a href="/breweries"> Breweries</a>
+        </li>
+        <li>
+          <a href="/breweries/new">Add a brewery</a>
+        </li>
+        <li>
+          <a href="/beers">Beers</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>Brewery Goodies</h2>
+        <a href="/breweries/<%= brewery._id %>/edit ">Edit</a>
+        <ul>
+          <li>Brewery: <%= brewery.name %></li>
+        </ul>
+      </section>
+      <form action="/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete" />
+      </form>
+
+      <section>
+        <h2>Beers</h2>
+        <ul>
+          <% brewery.beers.forEach(beer => { %>
+          <li>
+            <a href="/beers<%= beer._id %> "><%= beer.name %> </a>
+            <span> review submitted on: <%= beer.createdAt %> </span>
+          </li>
+          <% }) %>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>

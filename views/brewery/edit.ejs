@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/styles/main.css" />
     <script src="/public/scripts/app.js" defer></script>
-    <title>Document</title>
+    <title>Update Brewery</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <h1>Welcome to the Hoptimists</h1>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/breweries"></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Edit <%= brewery.name %></h2>
+      <form action="/breweries/ <%= brewery._id%>?_method=PUT" method="POST">
+        <input type="text" name="name" value="<%= brewery.name %> " />
+      </form>
+    </main>
+  </body>
 </html>
