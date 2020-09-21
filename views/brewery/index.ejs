@@ -5,7 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/styles/main.css" />
     <script src="/public/scripts/app.js" defer></script>
-    <title>Document</title>
+    <title>Hoptimists | Breweries</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <h1>Welcome to The Hoptimists</h1>
+      <ul>
+        <li>
+          <a href="/breweries">Breweries</a>
+        </li>
+        <li>
+          <a href="/breweries/new"> Add a brewery</a>
+        </li>
+        <li>
+          <a href="/beers">Display the beers</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h2>List of Breweries</h2>
+      <ul>
+        <% breweries.forEach(brewery => { %>
+        <li>
+          <a href="/breweries/ <%= brewery._id %> "> <%= brewery.name %> </a>
+        </li>
+        <% }) %>
+      </ul>
+      <% if(breweries.length === 0) { %>
+      <p>
+        There are no breweries yet! Be the first to share what brewery you are
+        at!!
+      </p>
+      <% } %>
+    </main>
+  </body>
 </html>
