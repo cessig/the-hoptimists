@@ -24,7 +24,7 @@
           <select name="brewery">
             <option default>Select a Brewery</option>
             <% breweries.forEach(brewery => { %>
-            <option value="<%= brewery._id %> "><%= brewery.name %></option>
+            <option value="<%= brewery._id %>"><%= brewery.name %></option>
             <% }) %>
           </select>
           <input type="submit" value="Create Beer" />

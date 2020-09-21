@@ -24,7 +24,7 @@
     </nav>
     <main>
       <section>
-        <h2><%= brewery.name %> Goodies</h2>
+        <h2>Goodies</h2>
         <a href="/breweries/<%= brewery._id %>/edit ">Edit</a>
         <ul>
           <li>Brewery: <%= brewery.name %></li>
@@ -39,8 +39,7 @@
         <ul>
           <% brewery.beers.forEach(beer => { %>
           <li>
-            <a href="/beers<%= beer._id %> "><%= beer.name %> </a>
-            <span> review submitted on: <%= beer.createdAt %> </span>
+            <a href="/beers/<%= beer._id %> "><%= beer.name %> </a>
           </li>
           <% }) %>
         </ul>

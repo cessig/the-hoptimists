@@ -47,7 +47,7 @@ router.post("/", function (req, res) {
       foundBrewery.beers.push(createdBeer);
       foundBrewery.save();
 
-      res.redirect("/beers");
+      res.redirect("/breweries");
     });
   });
 });
