@@ -44,7 +44,7 @@ router.post("/", function (req, res) {
       }
       console.log(foundBrewery);
       foundBrewery.beers.push(createdBeer);
-      foundBrewery.save;
+      foundBrewery.save();
 
       res.redirect("/beers");
     });
@@ -53,15 +53,14 @@ router.post("/", function (req, res) {
 
 // show
 router.get("/:id", function (req, res) {
-  db.Beer.findById(req.params.id),
-    function (error, foundBeer) {
-      if (error) {
-        console.log(error);
-        return res.send(error);
-      }
-      const context = { beer: foundBeer };
-      res.render("beer/show", context);
-    };
+  db.Beer.findById(req.params.id, function (error, foundBeer) {
+    if (error) {
+      console.log(error);
+      return res.send(error);
+    }
+    const context = { beer: foundBeer };
+    res.render("beer/show", context);
+  });
 });
 
 // edit
@@ -89,6 +88,7 @@ router.put("/:id", function (req, res) {
     res.redirect(`/beers/${updatedBeer._id}`);
   });
 });
+
 // delete
 router.delete("/:id", function (req, res) {
   db.Beer.findByIdAndDelete(req.params.id, function (error, deletedBeer) {
@@ -101,8 +101,10 @@ router.delete("/:id", function (req, res) {
         console.log(error);
         return res.send(error);
       }
-      foundBrewery.beer.remove(deletedBeer);
+      foundBrewery.beer.deleteOne(deletedBeer);
       foundBrewery.save();
+
+      res.redirect("/beers");
     });
   });
 });
