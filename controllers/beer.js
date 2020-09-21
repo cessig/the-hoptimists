@@ -18,11 +18,11 @@ router.get("/", function (req, res) {
 
 // new
 router.get("/new", function (req, res) {
-  db.Beer.find({}, function (error, foundBrewery) {
+  db.Brewery.find({}, function (error, foundBreweries) {
     if (error) return res.send(error);
 
     const context = {
-      breweries: foundBrewery,
+      breweries: foundBreweries,
     };
 
     res.render("beer/new", context);
@@ -97,12 +97,12 @@ router.delete("/:id", function (req, res) {
       console.log(error);
       return res.send(error);
     }
-    db.Beer.findById(deletedBeer.brewery, function (error, foundBrewery) {
+    db.Brewery.findById(deletedBeer.brewery, function (error, foundBrewery) {
       if (error) {
         console.log(error);
         return res.send(error);
       }
-      foundBrewery.beer.deleteOne(deletedBeer);
+      foundBrewery.beers.deleteOne(deletedBeer);
       foundBrewery.save();
 
       res.redirect("/beers");
