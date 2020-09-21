@@ -5,7 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/styles/main.css" />
     <script src="/public/scripts/app.js" defer></script>
-    <title>Document</title>
+    <title>Show beer</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <h1>The Hoptimists</h1>
+      <ul>
+        <li>
+          <a href="/breweries">Breweries</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>Beer Deets</h2>
+        <a href="/beers/<%= beer._id %>/edit">Edit</a>
+        <ul>
+          <li>Beer Name: <%=beer.name %></li>
+          <li>Beer Style: <%=beer.style %></li>
+          <li>Tasting Notes: <%=beer.notes %></li>
+          <li>Rating (1-10): <%=beer.rating %></li>
+        </ul>
+      </section>
+      <form action="/beers/<%= beer._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete" />
+      </form>
+    </main>
+  </body>
 </html>
