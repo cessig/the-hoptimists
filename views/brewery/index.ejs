@@ -3,10 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="/public/styles/main.css" />
     <script src="/public/scripts/app.js" defer></script>
     <title>Hoptimists | Breweries</title>
   </head>
+  <!-- Nav Bar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://localhost:4000/breweries">
+        <i class="fas fa-angle-double-right  is-large "></i>
+      </a>
+  
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+  
+        <a class="navbar-item">
+          Brewery List
+        </a>
+  
+        <a class="navbar-item">
+          About Us
+        </a>
+          </a>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+  <!-- Body -->
   <body>
     <nav>
       <h1>Welcome to The Hoptimists - landing page</h1>
@@ -14,9 +56,9 @@
         <li>
           <a href="/breweries/new"> Add a brewery</a>
         </li>
-        <!-- <li>
+        <li>
           <a href="/beers">Display the beers</a>
-        </li> -->
+        </li>
       </ul>
     </nav>
     <main>
