@@ -49,40 +49,65 @@
     </div>
   </nav>
   <!-- Body -->
-  <body>
-    <nav>
-      <h1>The Hoptimists</h1>
-      <h3>
-        <a href="/breweries">Back to the Breweries</a>
-      </h3>
-    </nav>
-    <main>
-      <form action="/beers" method="POST">
-        <input type="text" name="name" placeholder="Beer Name" /> <br />
-        <input type="text" name="style" placeholder="Beer Style" /> <br />
-        <input type="text" name="notes" placeholder="Tasting Notes" /> <br />
-        <input type="number" name="rating" placeholder="Rating (1-10)" /> <br />
+<body>
+<nav>
+<h1>The Hoptimists</h1>
+<h3>
+  <a href="/breweries">Back to the Breweries</a>
+    </h3>
+      </nav>
+          <main>
+          </div class="control">
+            <form action="/beers" method="POST">
+            <input class="input" type="text" name="name" placeholder="Beer Name" /> <br />
+            <input  class="input" type="text" name="style" placeholder="Beer Style" /> <br />
+            <input class="input" type="text" name="notes" placeholder="Tasting Notes" /> <br />
+            <input class="input" type="number" name="rating" placeholder="Rating (1-10)" /> <br />
+            </div>
+            <div class="field">
+              <p>
+                <label class="label">Select a Brewery</label>
+                <div class="control">
+                    <div class="select">
+              <select name="brewery">
+                <option default>Select a Brewery</option>
+                <% breweries.forEach(brewery => { %>
+                <option value="<%= brewery._id %>"><%= brewery.name %></option>
+                <% }) %>
+              </select>
+                  </div>
+                </div>
+              </div>
+              <div class="control">
+              <button class="button is-link">Create Beer</button>
+            </div>
+            </p>
+        </form>
+      </main>
+    </body>
+    
+      <!-- Footer -->
+        <footer class="footer">
+      <div class="content has-text-centered">
         <p>
-          <select name="brewery">
-            <option default>Select a Brewery</option>
-            <% breweries.forEach(brewery => { %>
-            <option value="<%= brewery._id %>"><%= brewery.name %></option>
-            <% }) %>
-          </select>
-          <input type="submit" value="Create Beer" />
+          <strong> <i class="fas fa-angle-double-right"></i> Hoptimists </strong> by Corey Essig and Rodrigo Marron 
+           
         </p>
-      </form>
-    </main>
-  </body>
-  <!-- Footer -->
-    <footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong> <i class="fas fa-angle-double-right"></i> Hoptimists </strong> by Corey Essig and Rodrigo Marron 
-       
-    </p>
-  </div>
-</footer>
-</html>
+      </div>
+    </footer>
+    </html>
+    
+    </html>
 
-</html>
+   
+      
+      
+      
+      
+      
+      
+      
+      
+          
+
+
