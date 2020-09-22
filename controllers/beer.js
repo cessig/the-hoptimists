@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const db = require("../models");
+const { findByIdAndUpdate } = require("../models/Beer");
 // base route is /beers
 
 // index
@@ -91,21 +92,24 @@ router.put("/:id", function (req, res) {
 });
 
 // delete
+
 router.delete("/:id", function (req, res) {
   db.Beer.findByIdAndDelete(req.params.id, function (error, deletedBeer) {
     if (error) {
       console.log(error);
       return res.send(error);
     }
+
     db.Brewery.findById(deletedBeer.brewery, function (error, foundBrewery) {
       if (error) {
         console.log(error);
         return res.send(error);
       }
-      foundBrewery.beers.deleteOne(deletedBeer);
+
+      foundBrewery.beers.remove(deletedBeer);
       foundBrewery.save();
 
-      res.redirect("/beers");
+      res.redirect(`/breweries/${deletedBeer.brewery}`);
     });
   });
 });
