@@ -58,17 +58,18 @@
       </nav>
           <main>
           </div class="control">
+          
             <form action="/beers" method="POST">
-            <input class="input" type="text" name="name" placeholder="Beer Name" /> <br />
-            <input  class="input" type="text" name="style" placeholder="Beer Style" /> <br />
-            <input class="input" type="text" name="notes" placeholder="Tasting Notes" /> <br />
-            <input class="input" type="number" name="rating" placeholder="Rating (1-10)" /> <br />
+            <input class="input is-success" type="text" name="name" placeholder="Beer Name" /> <br />
+            <input  class="input is-success" type="text" name="style" placeholder="Beer Style" /> <br />
+            <input class="input is-success" type="text" name="notes" placeholder="Tasting Notes" /> <br />
+            <input class="input is-success" type="number" name="rating" placeholder="Rating (1-10)" /> <br />
             </div>
             <div class="field">
               <p>
                 <label class="label">Select a Brewery</label>
                 <div class="control">
-                    <div class="select">
+                    <div class="select is-danger">
               <select name="brewery">
                 <option default>Select a Brewery</option>
                 <% breweries.forEach(brewery => { %>
