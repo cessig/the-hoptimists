@@ -19,35 +19,39 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://localhost:4000/breweries">
-        <i class="fas fa-angle-double-right  is-large "></i>
-      </a>
-  
+        <i class="fas fa-angle-double-right  is-large ">Hoptimist</i>
+      </a>  
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
-    </div>
-  
+    </div> 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
+        <a href="/breweries" class="navbar-item">
           Home
         </a>
-  
-        <a class="navbar-item">
-          Brewery List
+        <a href="/breweries/new" class="navbar-item">
+          New Brewery
         </a>
-  
-        <a class="navbar-item">
-          About Us
-        </a>
-          </a>
         </div>
-      </div>
-  
+      </div>  
     </div>
   </nav>
+  <!-- Hero -->
+  <header  class="is-family-monospace">
+    <section class="hero is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <nav>
+            <h1 class="title is-1"><%=brewery.name%> </h1>
+            <h2 class="title is-4"> Update this Brewery</h2>
+          </nav>
+        </div>        
+      </div>
+    </section>
+  </header>
   <!-- Body -->
   <body>
     <header>
@@ -87,7 +91,7 @@
     <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      <strong> <i class="fas fa-angle-double-right"></i> Hoptimists </strong> by Corey Essig and Rodrigo Marron 
+      <strong> <i class="fas fa-angle-double-right"></i> Hoptimists </strong> by Corey Essig and Rodrigo Marrón 
        
     </p>
   </div>
