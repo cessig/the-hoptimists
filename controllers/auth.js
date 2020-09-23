@@ -27,3 +27,29 @@ router.post("/register", async function (req, res) {
     res.send({ message: "Error inside the server", err: error });
   }
 });
+
+// login form
+router.get("/login", (req, res) => {
+  res.render("auth/login");
+});
+
+// login post and authentication
+router.post("/login", async function (req, res) {
+  try {
+    const foundUser = await db.User.findOne({ email: req.body.email });
+    if (!foundUser) {
+      return res.send({ message: "Email or Password incorrect" });
+    }
+    const match = await bcrypt.compare(req.body.password, foundUser);
+    if (!match) {
+      return res.send({ message: "Email or Password incorrect" });
+    }
+    req.session.currentUser = {
+      username: foundUser.username,
+      id: foundUser._id,
+    };
+    res.redirect("/");
+  } catch (error) {
+    res.send({ message: "Error inside the server", err: error });
+  }
+});
