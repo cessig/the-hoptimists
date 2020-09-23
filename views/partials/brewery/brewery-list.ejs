@@ -1,0 +1,25 @@
+<!-- Brewery List -->
+<div class="field">
+  <p>
+    <br />
+    <label class="label">Select a Brewery:</label>
+  </p>
+  <div class="field has-addons">
+    <div class="control is-expanded">
+      <div class="select is-fullwidth">
+        <select
+          name="breweries"
+          id="brewery"
+          onchange=" location = this.value "
+        >
+          <option default>--</option>
+          <% breweries.forEach( ( brewery, idx ) => { %>
+          <option id="<%= idx %>" value="/breweries/<%= brewery._id %>">
+            <%= brewery.name %>
+          </option>
+          <% }) %>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

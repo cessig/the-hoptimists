@@ -7,6 +7,7 @@
 
   <!-- Nav Bar -->
   <%- include('../partials/navbar.ejs') -%>
+
   <!-- Hero -->
   <header class="is-family-monospace">
     <section class="hero is-dark">
@@ -42,36 +43,11 @@
   <body>
     <main>
       <!-- Brewery List -->
-      <div class="field">
-        <p>
-          <br />
-          <label class="label">Select a Brewery:</label>
-        </p>
-
-        <div class="control">
-          <div class="select is-dark">
-            <select name="brewery">
-              <option default>--</option>
-              <% breweries.forEach(brewery => { %>
-              <option href="/breweries/<%= brewery._id %>">
-                <%= brewery.name %>
-              </option>
-              <% }) %>
-            </select>
-          </div>
-        </div>
-      </div>
-      <br />
+      <%- include('../partials/brewery/brewery-list.ejs') -%>
+      <br /><br />
 
       <!-- New Brewery Button -->
-
-      <!-- bottom link -->
-      <h3 class="content is-4">
-        Don't see the brewery you want listed? <br />
-        <a href="" class="button is-info has-background-info-dark"
-          >Add New Brewery</a
-        >
-      </h3>
+      <%- include('../partials/brewery/new-brewery-button.ejs') -%>
     </main>
   </body>
 
