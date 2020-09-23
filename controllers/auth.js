@@ -53,3 +53,5 @@ router.post("/login", async function (req, res) {
     res.send({ message: "Error inside the server", err: error });
   }
 });
+
+module.exports = router;
