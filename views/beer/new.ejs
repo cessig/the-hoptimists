@@ -7,53 +7,64 @@
 
   <!-- Nav Bar -->
   <%- include('../partials/navbar.ejs') -%>
+
   <!-- Hero -->
   <header class="is-family-monospace">
     <section class="hero is-dark">
       <div class="hero-body">
         <div class="container">
           <nav>
-            <h1 class="title is-1">Create a New Beer</h1>
-            <h2 class="title is-4">placeholder</h2>
+            <h1 class="title is-2">Share what beer you had</h1>
+            <h2 class="content is-medium">Fill out the boxes below</h2>
           </nav>
         </div>
       </div>
     </section>
   </header>
+
   <!-- Body -->
 <body>
   <br>
-<h3 class="content is-medium">
-  <a href="/breweries">Back to all Breweries</a>
-    </h3>
-          <main>
-          </div class="control">
-          
-            <form action="/beers" method="POST">
-            <input class="input is-primary" type="text" name="name" placeholder="Beer Name" /> <br />
-            <input  class="input is-primary" type="text" name="style" placeholder="Beer Style" /> <br />
-            <input class="input is-primary" type="text" name="notes" placeholder="Tasting Notes" /> <br />
-            <input class="input iis-primary" type="number" name="rating" placeholder="Rating (1-10)" /> <br />
-            </div>
-            <div class="field">
-              <p>
-                <label class="label">Select a Brewery</label>
-                <div class="control">
-                    <div class="select is-primary">
-              <select name="brewery">
-                <option default>Select a Brewery</option>
-                <% breweries.forEach(brewery => { %>
-                <option value="<%= brewery._id %>"><%= brewery.name %></option>
-                <% }) %>
-              </select>
-                  </div>
-                </div>
+    <main>
+
+      <!-- Form -->
+      <br>
+      </div class="control">
+        <form action="/beers" method="POST">
+        <input class="input is-primary" type="text" name="name" placeholder="Beer Name" /> <br />
+        <input  class="input is-primary" type="text" name="style" placeholder="Beer Style" /> <br />
+        <input class="input is-primary" type="text" name="notes" placeholder="Tasting Notes" /> <br />
+        <input class="input is-primary" type="number" name="rating" placeholder="Rating (1-10)" /> <br />
+        </div>
+
+        <!-- Drop-down Menu -->
+        <div class="field">
+          <p>
+            <br>
+            <label class="label">Select its Brewery</label>
+            <div class="control">
+                <div class="select is-primary">
+            <select name="brewery">
+              <option default>Brewery</option>
+              <% breweries.forEach(brewery => { %>
+              <option value="<%= brewery._id %>"><%= brewery.name %></option>
+              <% }) %>
+            </select>
               </div>
-              <div class="control">
-              <button class="button is-link">Create Beer</button>
             </div>
-            </p>
-        </form>
+          </div>
+          <!-- Create Beer button -->
+          <div class="control">
+          <button class="button is-link ">Create Beer</button>
+        </div>
+        </p>
+    </form>
+      <br> <br>
+
+      <!-- bottom links -->
+      <h3 class="content is-4"> Don't see the brewery you want listed? <br>
+        <a href="/breweries/new">Add New Brewery</a>
+          </h3>
       </main>
     </body>
     
