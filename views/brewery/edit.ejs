@@ -1,54 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="/public/styles/main.css" />
-    <script src="/public/scripts/app.js" defer></script>
+    <%- include('../partials/head-links.ejs') -%>
     <title class="container">Update Brewery</title>
   </head>
+
   <!-- Nav Bar -->
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="http://localhost:4000/breweries">
-        <i class="fas fa-angle-double-right  is-large ">Hoptimist</i>
-      </a>  
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div> 
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a href="/breweries" class="navbar-item">
-          Home
-        </a>
-        <a href="/breweries/new" class="navbar-item">
-          New Brewery
-        </a>
-        </div>
-      </div>  
-    </div>
-  </nav>
+  <%- include('../partials/navbar.ejs') -%>
   <!-- Hero -->
-  <header  class="is-family-monospace">
+  <header class="is-family-monospace">
     <section class="hero is-dark">
       <div class="hero-body">
         <div class="container">
           <nav>
-            <h1 class="title is-1"><%=brewery.name%> </h1>
-            <h2 class="title is-4"> Update this Brewery</h2>
+            <h1 class="title is-1"><%=brewery.name%></h1>
+            <h2 class="title is-4">Update this Brewery</h2>
           </nav>
-        </div>        
+        </div>
       </div>
     </section>
   </header>
@@ -76,29 +44,19 @@
     <main>
       <h2>Edit <%= brewery.name %></h2>
       <form action="/breweries/<%= brewery._id%>?_method=PUT" method="POST">
-       <div class="select">
-        <input
-          class="input"
-          type="text"
-          name="name"
-          value="<%= brewery.name %>
+        <div class="select">
+          <input
+            class="input"
+            type="text"
+            name="name"
+            value="<%= brewery.name %>
         "
-        />
+          />
         </div>
-        
       </form>
     </main>
   </body>
 
   <!-- Footer -->
-    <footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong> <i class="fas fa-angle-double-right"></i> Hoptimists </strong> by Corey Essig and Rodrigo Marrón 
-       
-    </p>
-  </div>
-</footer>
-</html>
-
+  <%- include('../partials/footer.ejs') -%>
 </html>

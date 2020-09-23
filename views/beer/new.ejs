@@ -1,104 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="/public/styles/main.css" />
-    <script src="/public/scripts/app.js" defer></script>
+    <%- include('../partials/head-links.ejs') -%>
     <title>New beer</title>
   </head>
+
   <!-- Nav Bar -->
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="http://localhost:4000/breweries">
-        <i class="fas fa-angle-double-right  is-large ">Hoptimist</i>
-      </a>  
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div> 
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a href="/breweries" class="navbar-item">
-          Home
-        </a>
-        <a href="/breweries/new" class="navbar-item">
-          New Brewery
-        </a>
-        </div>
-      </div>  
-    </div>
-  </nav>
+  <%- include('../partials/navbar.ejs') -%>
+
   <!-- Hero -->
-  <header  class="is-family-monospace">
+  <header class="is-family-monospace">
     <section class="hero is-dark">
       <div class="hero-body">
         <div class="container">
           <nav>
-            <h1 class="title is-1">Create a New Beer</h1>
-            <h2 class="title is-4"> placeholder</h2>
+            <h1 class="title is-2">Tell us what you had</h1>
+            <h2 class="content is-medium"></h2>
           </nav>
-        </div>        
+        </div>
       </div>
     </section>
   </header>
+
   <!-- Body -->
 <body>
-<nav>
-<h1>The Hoptimists</h1>
-<h3>
-  <a href="/breweries">Back to the Breweries</a>
-    </h3>
-      </nav>
-          <main>
-          </div class="control">
-          
-            <form action="/beers" method="POST">
-            <input class="input is-success" type="text" name="name" placeholder="Beer Name" /> <br />
-            <input  class="input is-success" type="text" name="style" placeholder="Beer Style" /> <br />
-            <input class="input is-success" type="text" name="notes" placeholder="Tasting Notes" /> <br />
-            <input class="input is-success" type="number" name="rating" placeholder="Rating (1-10)" /> <br />
-            </div>
-            <div class="field">
-              <p>
-                <label class="label">Select a Brewery</label>
-                <div class="control">
-                    <div class="select is-danger">
-              <select name="brewery">
-                <option default>Select a Brewery</option>
-                <% breweries.forEach(brewery => { %>
-                <option value="<%= brewery._id %>"><%= brewery.name %></option>
-                <% }) %>
-              </select>
-                  </div>
-                </div>
+  <br>
+    <main>
+
+      <!-- Form -->
+      <label class="label">Fill out all boxes below:</label>
+      </div class="control">
+        <form action="/beers" method="POST">
+        <input class="input is-dark" type="text" name="name" placeholder="Beer Name" /> <br />
+        <input  class="input is-dark" type="text" name="style" placeholder="Beer Style" /> <br />
+        <input class="input is-dark" type="text" name="notes" placeholder="Tasting Notes" /> <br />
+        <input class="input is-dark" type="number" name="rating" placeholder="Rating (1-10)" /> <br />
+        </div>
+
+        <!-- Drop-down Menu -->
+        <div class="field">
+          <p>
+            <br>
+            <label class="label">Select its Brewery:</label>
+            <div class="control">
+                <div class="select is-dark">
+            <select name="brewery">
+              <option default>--</option>
+              <% breweries.forEach(brewery => { %>
+              <option value="<%= brewery._id %>"><%= brewery.name %></option>
+              <% }) %>
+            </select>
               </div>
-              <div class="control">
-              <button class="button is-link">Create Beer</button>
             </div>
-            </p>
-        </form>
+          </div>
+          <!-- Create Beer button -->
+          <div class="control">
+          <button class="button is-link ">Create Beer</button>
+        </div>
+        </p>
+    </form>
+      <br> <br>
+
+      <!-- bottom link -->
+      <h3 class="content is-4"> Don't see the brewery you want listed? <br>
+        <a href="/breweries/new">Add New Brewery</a>
+          </h3>
       </main>
     </body>
     
   <!-- Footer -->
-    <footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong> <i class="fas fa-angle-double-right"></i> Hoptimists </strong> by Corey Essig and Rodrigo Marrón 
-       
-    </p>
-  </div>
-</footer>
+  <%- include('../partials/footer.ejs') -%>
 </html>
-
