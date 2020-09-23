@@ -40,7 +40,7 @@ router.post("/login", async function (req, res) {
     if (!foundUser) {
       return res.send({ message: "Email or Password incorrect" });
     }
-    const match = await bcrypt.compare(req.body.password, foundUser);
+    const match = await bcrypt.compare(req.body.password, foundUser.password);
     if (!match) {
       return res.send({ message: "Email or Password incorrect" });
     }
@@ -50,6 +50,7 @@ router.post("/login", async function (req, res) {
     };
     res.redirect("/");
   } catch (error) {
+    console.log(error);
     res.send({ message: "Error inside the server", err: error });
   }
 });
