@@ -48,7 +48,7 @@ router.post("/login", async function (req, res) {
       username: foundUser.username,
       id: foundUser._id,
     };
-    res.redirect("/");
+    res.redirect("/breweries");
   } catch (error) {
     console.log(error);
     res.send({ message: "Error inside the server", err: error });
