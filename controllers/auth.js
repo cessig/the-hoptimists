@@ -55,4 +55,9 @@ router.post("/login", async function (req, res) {
   }
 });
 
+router.get("/logout", async function (req, res) {
+  req.session.destroy();
+  res.redirect("/login");
+});
+
 module.exports = router;
