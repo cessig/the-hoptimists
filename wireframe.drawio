@@ -1,0 +1,184 @@
+<mxfile host="78878561-3b5a-48d6-bc66-a8d4251d6fc6" modified="2020-09-24T16:47:00.710Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="dVZeWWO_M7WAhFwk50xu" version="13.1.3">
+    <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
+        <mxGraphModel dx="997" dy="2034" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="50" width="390" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="150" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="50" width="390" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Home Page" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="20" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="520" width="390" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="List of Beers" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="610" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="980" width="390" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="SHOW Beer + User input. DELETE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="950" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="300" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="The Hoptimists + Nav Bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="135" y="70" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="User inputs a brewery they are at" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="115" y="320" width="190" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Description of web application" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="170" width="170" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="1450" width="390" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="User Signup for weekly email &lt;b&gt;(Stretch goal)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="85" y="1430" width="250" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="The Hoptimists + Nav Bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="135" y="540" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="520" width="390" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="The Hoptimists + Nav Bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="135" y="540" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="The Hoptimists + Nav Bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="135" y="1000" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="980" width="390" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="The Hoptimists + Nav Bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="135" y="1010" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="The Hoptimists + Nav Bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="135" y="1480" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="1450" width="390" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="The Hoptimists + Nav Bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="135" y="1490" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="600" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="user inputs beer they are trying:&lt;br&gt;&lt;br&gt;name of beer: String&lt;br&gt;style of beer: String&lt;br&gt;tasting notes: String&lt;br&gt;rating 1-10: Number" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="670" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;h1&gt;&lt;ul style=&quot;font-size: 12px&quot;&gt;&lt;li&gt;beer 1&lt;/li&gt;&lt;li&gt;beer 2&lt;/li&gt;&lt;li&gt;beer 3&lt;/li&gt;&lt;/ul&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="145" y="790" width="135" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="1090" width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Displays info of selected beer:&lt;br&gt;&lt;br&gt;name of beer: String&lt;br&gt;style of beer: String&lt;br&gt;tasting notes: String&lt;br&gt;rating 1-10: Number" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="1150" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="1270" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="1270" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Edit Beer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="1290" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Delete Beer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="235" y="1290" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="INDEX &amp;amp; NEW/CREATE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="490" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="980" width="390" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="EDIT beer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="605" y="950" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="The Hoptimists + Nav Bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="565" y="1000" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="980" width="390" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="The Hoptimists + Nav Bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="565" y="1010" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="530" y="1090" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="Prompt User to re-enter all information:&lt;br&gt;&lt;br&gt;name of beer: String&lt;br&gt;style of beer: String&lt;br&gt;tasting notes: String&lt;br&gt;rating 1-10: Number" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="1150" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&lt;b&gt;(stretch goal)&lt;/b&gt; when creating a beer: take name of beer, query of DB to check if it exists, if yes then send to beer page and notify user, or create beer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1250" y="1490" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;b&gt;(stretch goal)&amp;nbsp;&lt;/b&gt;&amp;nbsp;&lt;span&gt;create a beer for a brewery and display list of existing beers, if not available then add your beer&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1250" y="1400" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.012;entryY=0.103;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="45" target="55">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Brewery" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="390" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="ERD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="290" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;span id=&quot;docs-internal-guid-71849df3-7fff-c017-9060-932981379f20&quot;&gt;&lt;span style=&quot;font-size: 11pt; font-family: arial; background-color: transparent; font-weight: 700; vertical-align: baseline;&quot;&gt;Core functionality:&lt;/span&gt;&lt;span style=&quot;font-size: 11pt; font-family: arial; background-color: transparent; vertical-align: baseline;&quot;&gt; user be able to pick brewery, show list of brewery’s beers, select a specific beer, then user input to rate the beer + tasting notes, server will store information, and display tasting notes (stretch: display avg. rate)&lt;/span&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#F0F0F0;" vertex="1" parent="1">
+                    <mxGeometry x="1250" y="1180" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="User Story" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#F0F0F0;" vertex="1" parent="1">
+                    <mxGeometry x="1330" y="1090" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="DB&amp;nbsp; Model" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#F0F0F0;" vertex="1" parent="1">
+                    <mxGeometry x="689" y="20" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="DB Brewery" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#F0F0F0;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="50" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="Schema&lt;br&gt;&lt;br&gt;Name: String&lt;br&gt;Beers: [ ref Beer ]" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#F0F0F0;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="110" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="DB Beer" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#F0F0F0;" vertex="1" parent="1">
+                    <mxGeometry x="770" y="50" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="Schema&lt;br&gt;&lt;br&gt;Name: type String&lt;br&gt;Style: type String&lt;br&gt;Tasting Notes: type String&lt;br&gt;Rating(1-10): type Number" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#F0F0F0;" vertex="1" parent="1">
+                    <mxGeometry x="770" y="110" width="160" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="&lt;b&gt;(stretch goal)&amp;nbsp;&lt;/b&gt;&amp;nbsp;user signup with email for weekly newsletter + updates/ events" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1250" y="1330" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="One Beer" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="765" y="360" width="160" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Name: String" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="55">
+                    <mxGeometry y="26" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="Style: String" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="55">
+                    <mxGeometry y="56" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="Tasting Notes: String&#10;&#10;Rating(1-10): Number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="55">
+                    <mxGeometry y="86" width="160" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="User Auth&amp;nbsp;&lt;b&gt;(Stretch goal)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="137.5" y="1410" width="150" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

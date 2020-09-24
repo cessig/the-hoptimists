@@ -47,12 +47,11 @@
     <h2 class="label">Make Changes to:</h2>
     <a class="content is-link is-medium" href="/beers/<%= beer._id %>/edit ">
       <%=beer.name %>
-    </a>
-    <br /><br />
+    </a><br><br><br>
 
     <!-- Delete Beer Button -->
     <form action="/beers/<%= beer._id %>?_method=DELETE" method="POST">
-      <input class="button" disabled type="submit" value="Delete" />
+      <input class="button" type="submit" value="Delete" />
     </form>
   </body>
 
