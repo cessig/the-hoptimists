@@ -7,38 +7,55 @@
 
   <!-- Nav Bar -->
   <%- include('../partials/navbar.ejs') -%>
+
   <!-- Hero -->
   <header class="is-family-monospace">
     <section class="hero is-dark">
       <div class="hero-body">
         <div class="container">
           <nav>
-            <h1 class="title is-1">name: <%=beer.name%></h1>
-            <h2 class="title is-4"><%= beer.style%></h2>
+            <h1 class="title is-2"><%=beer.name%></h1>
+            <span class="tag is-info is-large"> <strong> <%= beer.style%> </strong></span>
           </nav>
         </div>
       </div>
     </section>
   </header>
+
   <!-- Body -->
   <body>
     <main>
-      <section>
-        <br />
-        <h2 class="label">Details & Notes</h2>
-        <a href="/beers/<%= beer._id %>/edit">Update</a>
-        <ul>
-          <li>Beer Name: <%=beer.name %></li>
-          <li>Beer Style: <%=beer.style %></li>
-          <li>Tasting Notes: <%=beer.notes %></li>
-          <li>Rating (1-10): <%=beer.rating %></li>
-        </ul>
-      </section>
-      <form action="/beers/<%= beer._id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete" />
-      </form>
-    </main>
+      <br /><br />
+
+      <div class="block">
+        <article class="message is-dark">
+          <div class="message-header">
+            <p>Details & Notes</p>          
+          </div>
+          <div class="message-body">
+            <ul>
+              <li> Name: <strong> <%=beer.name %> </strong>  </li>
+              <li> Style: <strong> <%=beer.style %> </strong>  </li>
+              <li> Tasting Notes: <strong> <%=beer.notes %> </strong>  </li>
+              <li> Rating (1-10): <strong> <%=beer.rating %> </strong>  </li>
+            </ul>
+          </div>
+        </article>
+
+
+    <!-- Update Beer -->
+    <h2 class="label">Make Changes to:</h2>
+    <a class="content is-link is-medium" href="/beers/<%= beer._id %>/edit ">
+      <%=beer.name %>
+    </a>
+    <br /><br />
+
+    <!-- Delete Beer Button -->
+    <form action="/beers/<%= beer._id %>?_method=DELETE" method="POST">
+      <input class="button" disabled type="submit" value="Delete" />
+    </form>
   </body>
+
   <!-- Footer -->
   <%- include('../partials/footer.ejs') -%>
 </html>
