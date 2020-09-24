@@ -16,7 +16,8 @@ const controllers = require("./controllers");
 /* All Use of DOTENV */
 
 require("dotenv").config();
-const PORT = process.env.PORT || 4000;
+console.log(process.env);
+const PORT = process.env.PORT;
 app.set("view engine", "ejs");
 
 /* middleware */

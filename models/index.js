@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 // connection string
-const connectionString =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/the-hoptimists";
+require("dotenv").config();
+const connectionString = process.env.MONGODB_URI;
 
 //
 mongoose
