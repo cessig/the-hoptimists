@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <%- include('../partials/head-links.ejs') -%>
-    <title>Show beer</title>
+    <title>Hoptimist | <%= beer.name %></title>
   </head>
 
   <!-- Nav Bar -->
@@ -13,7 +13,7 @@
       <div class="hero-body">
         <div class="container">
           <nav>
-            <h1 class="title is-1"><%=beer.name%></h1>
+            <h1 class="title is-1">name: <%=beer.name%></h1>
             <h2 class="title is-4"><%= beer.style%></h2>
           </nav>
         </div>
@@ -24,8 +24,9 @@
   <body>
     <main>
       <section>
-        <h2>Beer Deets</h2>
-        <a href="/beers/<%= beer._id %>/edit">Edit</a>
+        <br />
+        <h2 class="label">Details & Notes</h2>
+        <a href="/beers/<%= beer._id %>/edit">Update</a>
         <ul>
           <li>Beer Name: <%=beer.name %></li>
           <li>Beer Style: <%=beer.style %></li>

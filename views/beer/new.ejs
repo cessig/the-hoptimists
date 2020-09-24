@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <%- include('../partials/head-links.ejs') -%>
-    <title>New beer</title>
+    <title>Hoptimist | New beer</title>
   </head>
 
   <!-- Nav Bar -->
@@ -15,7 +15,6 @@
         <div class="container">
           <nav>
             <h1 class="title is-2">Tell us what you had</h1>
-            <h2 class="content is-medium"></h2>
           </nav>
         </div>
       </div>
@@ -45,7 +44,7 @@
             <div class="control">
                 <div class="select is-dark">
             <select name="brewery">
-              <option default>Name</option>
+              <option default>--</option>
               <% breweries.forEach(brewery => { %>
               <option value="<%= brewery._id %>"><%= brewery.name %></option>
               <% }) %>
@@ -55,7 +54,7 @@
           </div>
           <!-- Create Beer button -->
           <div class="control">
-          <button class="button is-link ">Create Beer</button>
+          <button class="button is-link ">Add Beer</button>
         </div>
         </p>
     </form>

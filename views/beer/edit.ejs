@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <%- include('../partials/head-links.ejs') -%>
-    <title>Edit Beer</title>
+    <title>Hoptimist | Update Beer</title>
   </head>
 
   <!-- Nav Bar -->
@@ -25,32 +25,32 @@
     <main>
       <br />
       <!-- Form -->
-      <h2>Update this beer:</h2>
+      <h2 class="label">Update this beer:</h2>
       <div class="control">
         <form action="/beers/<%= beer._id%>?_method=PUT" method="POST">
           <input
-            class="input"
+            class="input input is-dark"
             type="text"
             name="name"
             placeholder="Beer Name"
           />
           <br />
           <input
-            class="input"
+            class="input input is-dark"
             type="text"
             name="style"
             placeholder="Beer Style"
           />
           <br />
           <input
-            class="input"
+            class="input input is-dark"
             type="text"
             name="notes"
             placeholder="Tasting Notes"
           />
           <br />
           <input
-            class="input"
+            class="input input is-dark"
             type="number"
             name="rating"
             placeholder="Rating (1-10)"

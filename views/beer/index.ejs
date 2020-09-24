@@ -2,54 +2,59 @@
 <html lang="en">
   <head>
     <%- include('../partials/head-links.ejs') -%>
-    <title>Hoptimists | Beers</title>
+    <title>Hoptimist | All Beers</title>
   </head>
 
   <!-- Nav Bar -->
   <%- include('../partials/navbar.ejs') -%>
+
   <!-- Hero -->
   <header class="is-family-monospace">
     <section class="hero is-dark">
       <div class="hero-body">
         <div class="container">
           <nav>
-            <h1 class="title is-1">All Beers on Record</h1>
-            <h2 class="title is-4">placeholder</h2>
+            <h1 class="title is-2">Beers Discovered</h1>
           </nav>
         </div>
       </div>
     </section>
   </header>
+
   <!-- Body -->
   <body>
-    <nav>
-      <h1>Welcome to Hoptimist</h1>
-      <ul>
-        <li>
-          <a href="/breweries">Breweries</a>
-        </li>
-        <li>
-          <a href="/beers/new"> Add a beer</a>
-        </li>
-      </ul>
-    </nav>
     <main>
-      <h2>List of Beers</h2>
-      <ul>
-        <% beers.forEach(beer => { %>
-        <li>
-          <a href="/beers/<%= beer._id %>"> <%= beer.name %> </a>
-        </li>
-        <% }) %>
-      </ul>
-      <% if(beers.length === 0) { %>
-      <p>
-        There are no beers yet! Be the first to share what beer you are having
-        and what you think of it.
-      </p>
-      <% }%>
+      <br /><br />
+
+      <!-- Menu -->
+      <div class="block">
+        <aside class="menu">
+          <ul class="menu-list">
+            <li>
+              <a class="subtitle is-active" href="#"
+                >See one you like?
+                <strong class="has-text-white">Check it out. </strong>
+              </a>
+              <ul>
+                <% beers.forEach(beer => { %>
+                <li>
+                  <a href="/beers/<%= beer._id %>"> <%= beer.name %> </a>
+                </li>
+                <% }) %>
+              </ul>
+              <% if(beers.length === 0) { %>
+              <p>
+                There are no beers yet! Be the first to share what beer you are
+                having and what you think of it.
+              </p>
+              <% }%>
+            </li>
+          </ul>
+        </aside>
+      </div>
     </main>
   </body>
   <!-- Footer -->
+
   <%- include('../partials/footer.ejs') -%>
 </html>
