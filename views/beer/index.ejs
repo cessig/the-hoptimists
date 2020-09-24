@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head-links.ejs') -%>
+    <title>Hoptimist | All Beers</title>
+  </head>
+
+  <!-- Nav Bar -->
+  <%- include('../partials/navbar.ejs') -%>
+
+  <!-- Hero -->
+  <header class="is-family-monospace">
+    <section class="hero is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <nav>
+            <h1 class="title is-2">Beers discovered by hoptimists</h1>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- Body -->
+  <body>
+    <main>
+      <br /><br />
+
+      <!-- Menu -->
+      <div class="block">
+        <aside class="menu">
+          <ul class="menu-list">
+            <li>
+              <a class="subtitle is-active" href="#"
+                >See one you like?
+                <strong class="has-text-white">Check it out. </strong>
+              </a>
+              <ul>
+                <% beers.forEach(beer => { %>
+                <li>
+                  <a href="/beers/<%= beer._id %>"> <%= beer.name %> </a>
+                </li>
+                <% }) %>
+              </ul>
+              <% if(beers.length === 0) { %>
+              <p>
+                There are no beers yet! Be the first to share what beer you are
+                having and what you think of it.
+              </p>
+              <% }%>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+  </body>
+  <!-- Footer -->
+
+  <%- include('../partials/footer.ejs') -%>
+</html>

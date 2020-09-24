@@ -1,9 +1,11 @@
-/* Exterenal Modules */
+/* External Modules */
 const express = require("express");
 const app = express();
+const path = require("path");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
+
 /* Internal Modules */
 const db = require("./models");
 const controllers = require("./controllers");
@@ -11,31 +13,58 @@ const controllers = require("./controllers");
 /* Instanced Modules */
 
 /* Configuration */
+/* All Use of DOTENV */
 
-const PORT = 4000;
+require("dotenv").config();
+console.log(process.env);
+const PORT = process.env.PORT;
 app.set("view engine", "ejs");
 
 /* middleware */
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: false,
+    secret: "hops",
+    store: new MongoStore({
+      url:
+        process.env.MONGODB_URI || "mongodb://localhost:27017/the-hoptimists",
+    }),
+    cookie: {
+      maxAge: 1000 * 60 * 24 * 7 * 2,
+    },
+  })
+);
+
+const authRequried = function (req, res, next) {
+  if (!req.session.currentUser) {
+    return res.redirect("/login");
+  }
+  next();
+};
+
 /* Routes */
 
 // Views routes
 app.get("/", function (req, res) {
   // render
-  res.render("index");
+  res.render("index", { user: req.session.currentUser });
 });
 
 // Auth Routes
+app.use("/", controllers.auth);
 
 // Beer Routes
-app.use("/beers", controllers.beer);
+app.use("/beers", authRequried, controllers.beer);
 
 // Brewery Routes
-app.use("/breweries", controllers.brewery);
+app.use("/breweries", authRequried, controllers.brewery);
 
 /* Server Listener */
 
 app.listen(PORT, () => {
-  console.log(`Listening at http://localhost:${PORT}`);
+  console.log(`Listening at ${PORT}`);
 });

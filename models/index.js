@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 // connection string
-const connectionString = "mongodb://localhost:27017/the-hoptimists";
+require("dotenv").config();
+const connectionString = process.env.MONGODB_URI;
 
 //
 mongoose
@@ -8,7 +9,7 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: true,
+    useFindAndModify: false,
   })
   .then(function () {
     console.log("Mongodb connected...");
@@ -21,4 +22,9 @@ mongoose.connection.on("disconnect", function (event) {
   console.log("Mongodb disconnected", event);
 });
 
-module.exports = {};
+module.exports = {
+  Beer: require("./Beer"),
+  Brewery: require("./Brewery"),
+  User: require("./User"),
+  Profile: require("./Profile"),
+};

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head-links.ejs') -%>
+    <title class="container">Hoptimist | Update Brewery</title>
+  </head>
+
+  <!-- Nav Bar -->
+  <%- include('../partials/navbar.ejs') -%>
+
+  <!-- Hero -->
+  <header class="is-family-monospace">
+    <section class="hero is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <nav>
+            <h1 class="title is-2"><%=brewery.name%></h1>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- Body -->
+  <body>
+    <main>
+      <br />
+      <!-- Form -->
+      <h2 class="label">Update this brewery:</h2>
+      <div class="control">
+        <form action="/breweries/<%= brewery._id%>?_method=PUT" method="POST">
+          <input
+            class="input input is-dark"
+            type="text"
+            name="name"
+            placeholder="Brewery Name"
+          />
+          <br />
+          <br />
+          <button class="button is-link">Submit</button>
+        </form>
+      </div>
+    </main>
+  </body>
+
+  <!-- Footer -->
+  <%- include('../partials/footer.ejs') -%>
+</html>

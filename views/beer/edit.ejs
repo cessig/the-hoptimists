@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head-links.ejs') -%>
+    <title>Hoptimist | Update Beer</title>
+  </head>
+
+  <!-- Nav Bar -->
+  <%- include('../partials/navbar.ejs') -%>
+  <!-- Hero -->
+  <header class="is-family-monospace">
+    <section class="hero is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <nav>
+            <h1 class="title is-2"><%=beer.name%></h1>
+            <h2 class="title is-4"><%=beer.style%></h2>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </header>
+  <!-- Body -->
+  <body>
+    <main>
+      <br />
+      <!-- Form -->
+      <h2 class="label">Update this beer:</h2>
+      <div class="control">
+        <form action="/beers/<%= beer._id%>?_method=PUT" method="POST">
+          <input
+            class="input input is-dark"
+            type="text"
+            name="name"
+            placeholder="Beer Name"
+          />
+          <br />
+          <input
+            class="input input is-dark"
+            type="text"
+            name="style"
+            placeholder="Beer Style"
+          />
+          <br />
+          <input
+            class="input input is-dark"
+            type="text"
+            name="notes"
+            placeholder="Tasting Notes"
+          />
+          <br />
+          <input
+            class="input input is-dark"
+            type="number"
+            name="rating"
+            placeholder="Rating (1-10)"
+          />
+          <br />
+          <br />
+          <button class="button is-link">Submit</button>
+        </form>
+      </div>
+    </main>
+  </body>
+
+  <!-- Footer -->
+  <%- include('../partials/footer.ejs') -%>
+</html>

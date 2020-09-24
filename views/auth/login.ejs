@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head-links.ejs') -%>
+    <title>Hoptimist | Login</title>
+  </head>
+
+  <!-- Nav Bar -->
+  <%- include('../partials/navbar.ejs') -%>
+
+  <!-- Body -->
+  <body>
+    <br /><br />
+    <h1 class="title is-3">Thanks for Coming Back!</h1>
+    <br />
+
+    <!-- Form -->
+    <h2 class="label">Sign in</h2>
+    <div class="control"></div>
+      <form action="/login" method="POST">
+        <input class="input is-link" type="email" name="email" placeholder="email" required /><br />
+        <input class="input is-link" type="password" name="password" placeholder="password" required />
+        <br /><br />
+        <button class="button is-link">Login</button>
+      </form>
+    </div>
+    <br /><br />
+
+    <!-- New Member -->
+    <h3 class="label">Not a Hoptimist yet?</h3>
+    <a href="/register">Create Account</a>
+  </body>
+
+  <!-- Footer -->
+  <%- include('../partials/footer.ejs') -%>
+</html>
