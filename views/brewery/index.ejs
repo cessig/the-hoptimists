@@ -7,6 +7,7 @@
 
   <!-- Nav Bar -->
   <%- include('../partials/navbar.ejs') -%>
+
   <!-- Hero -->
   <header class="is-family-monospace">
     <section class="hero is-dark">
@@ -20,51 +21,36 @@
     </section>
   </header>
 
-  <!-- BOX  -->
+  <!-- Box  -->
   <div class="block">
     <div class="box is-family-monospace">
       <h1 class="title is-4">About Us</h1>
       <p>
-        <strong>Hoptimist</strong> is brought to you by two dudes who enjoy beer
-        so much they want to share it with the world! <br />
-        With Hoptimists you can pick from our list of breweries and add the
-        beers you've experienced. Your rating for each beer will be viewable by
-        other hoptimists! If you don't see the brewery you want from our list,
-        then you can create it yourself by clicking the big green button below.
+        <strong>Hoptimist</strong> is brought to you by two people who enjoy
+        everything about beer so much that they wanted to cerate a place where
+        they could share their tasting experiences with other beer enthusiasts,
+        regardless of location. <br /><br />
+        With Hoptimist you are able to pick from a list of breweries and add the
+        beers you want to review and share. Your notes for each beer will be
+        viewable by other hoptimists! <br />
+        If you don't see the brewery you want from our list, then you can create
+        it yourself by clicking the big blue button below.
       </p>
     </div>
   </div>
 
   <!-- Body -->
-  <body class="">
-    <a href="" class="button is-info has-background-info-dark">Get Started</a>
-    <nav>
-      <ul>
-        <li>
-          <a href="/breweries/new"> Add a brewery</a>
-        </li>
-        <li>
-          <a href="/beers">Display the beers</a>
-        </li>
-      </ul>
-    </nav>
+  <body>
     <main>
-      <h2>List of Breweries</h2>
-      <ul>
-        <% breweries.forEach(brewery => { %>
-        <li>
-          <a href="/breweries/<%= brewery._id %>"> <%= brewery.name %> </a>
-        </li>
-        <% }) %>
-      </ul>
-      <% if(breweries.length === 0) { %>
-      <p>
-        There are no breweries yet! Be the first to share what brewery you are
-        at!!
-      </p>
-      <% } %>
+      <!-- Brewery List -->
+      <%- include('../partials/brewery/brewery-list.ejs') -%>
+      <br /><br />
+
+      <!-- New Brewery Button -->
+      <%- include('../partials/brewery/new-brewery-button.ejs') -%>
     </main>
   </body>
+
   <!-- Footer -->
   <%- include('../partials/footer.ejs') -%>
 </html>

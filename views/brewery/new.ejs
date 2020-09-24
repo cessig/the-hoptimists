@@ -2,34 +2,44 @@
 <html lang="en">
   <head>
     <%- include('../partials/head-links.ejs') -%>
-    <title>Tell us what brewery you are at!</title>
+    <title>Hoptimist | New Brewery</title>
   </head>
 
   <!-- Nav Bar -->
   <%- include('../partials/navbar.ejs') -%>
+
   <!-- Hero -->
   <header class="is-family-monospace">
     <section class="hero is-dark">
       <div class="hero-body">
         <div class="container">
           <nav>
-            <h1 class="title is-1">New Brewery</h1>
-            <h2 class="title is-4">placeholder</h2>
+            <h1 class="title is-2">Add New Brewery</h1>
           </nav>
         </div>
       </div>
     </section>
   </header>
+
   <!-- Body -->
   <body>
     <main>
+      
       <!-- Form -->
-      <form action="/breweries" method="POST">
-        <input type="text" name="name" placeholder="Brewery Name" /> <br />
-        <input type="submit" value="Submit" />
-      </form>
+      <br><br>
+      <label class="label">Fill out box below:</label>
+      </div class="control">
+        <form action="/breweries" method="POST">
+        <input class="input is-dark" type="text" name="name" placeholder="Brewery Name" /> <br />
+        </div>
+        <br>
+        <!-- Create Brewery button -->
+        <div class="control">
+          <button class="button is-link ">Add Brewery</button>
+        </div>
     </main>
   </body>
+
   <!-- Footer -->
   <%- include('../partials/footer.ejs') -%>
 </html>

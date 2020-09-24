@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <%- include('../partials/head-links.ejs') -%>
-    <title>New beer</title>
+    <title>Hoptimist | New beer</title>
   </head>
 
   <!-- Nav Bar -->
@@ -14,8 +14,7 @@
       <div class="hero-body">
         <div class="container">
           <nav>
-            <h1 class="title is-2">Tell us what you had</h1>
-            <h2 class="content is-medium"></h2>
+            <h1 class="title is-2">Tell us about your latest beer</h1>
           </nav>
         </div>
       </div>
@@ -29,7 +28,7 @@
 
       <!-- Form -->
       <label class="label">Fill out all boxes below:</label>
-      </div class="control">
+      <div class="control">
         <form action="/beers" method="POST">
         <input class="input is-dark" type="text" name="name" placeholder="Beer Name" /> <br />
         <input  class="input is-dark" type="text" name="style" placeholder="Beer Style" /> <br />
@@ -55,7 +54,7 @@
           </div>
           <!-- Create Beer button -->
           <div class="control">
-          <button class="button is-link ">Create Beer</button>
+          <button class="button is-link ">Add Beer</button>
         </div>
         </p>
     </form>
