@@ -14,8 +14,8 @@
       <div class="hero-body">
         <div class="container">
           <nav>
+            <h2 class="subtitle is-5">Brewery:</h2>
             <h1 class="title is-2"><%=brewery.name%></h1>
-            <h2 class="title is-4">Location ?</h2>
           </nav>
         </div>
       </div>
@@ -36,7 +36,7 @@
       <br /><br />
 
       <!-- Menu -->
-      <h3 class="label">All <%=brewery.name %> beers: <br /></h3>
+      <h3 class="label">All of <%=brewery.name %> beers: <br /></h3>
       <div class="block">
         <aside class="menu">
           <ul class="menu-list">
@@ -65,11 +65,6 @@
       </h3>
     </main>
     <br />
-
-    <!-- Delete Brewery Button -->
-    <form action="/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
-      <input class="button" disabled type="submit" value="Delete" />
-    </form>
   </body>
 
   <!-- Footer -->
