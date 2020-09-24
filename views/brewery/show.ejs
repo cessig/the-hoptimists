@@ -4,8 +4,10 @@
     <%- include('../partials/head-links.ejs') -%>
     <title>Hoptimist | <%=brewery.name%></title>
   </head>
+
   <!-- Nav Bar -->
   <%- include('../partials/navbar.ejs') -%>
+
   <!-- Hero -->
   <header class="is-family-monospace">
     <section class="hero is-dark">
@@ -13,52 +15,61 @@
         <div class="container">
           <nav>
             <h1 class="title is-1"><%=brewery.name%></h1>
-            <h2 class="title is-4">placeholder</h2>
+            <h2 class="title is-4">Location ?</h2>
           </nav>
         </div>
       </div>
     </section>
   </header>
+
   <!-- Body -->
   <body>
-    <nav>
-      <h1>The Hoptimists</h1>
-      <ul>
-        <li>
-          <a href="/breweries"> Back to Breweries List</a>
-        </li>
-        <li>
-          <a href="/breweries/new">Add a brewery</a>
-        </li>
-        <li>
-          <a href="/beers/new">Add a New Beer & Rate</a>
-        </li>
-      </ul>
-    </nav>
     <main>
-      <section>
-        <h2>Goodies</h2>
-        <a href="/breweries/<%= brewery._id %>/edit ">Edit</a>
-        <ul>
-          <li>Brewery: <%= brewery.name %></li>
-        </ul>
-      </section>
-      <form action="/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete" />
-      </form>
+      <!-- Update Brewery -->
+      <a
+        class="content is-link is-medium"
+        href="/breweries/<%= brewery._id %>/edit "
+        >Update <%=brewery.name %>
+      </a>
+      <br /><br />
 
-      <section>
-        <h2>Beers</h2>
-        <ul>
-          <% brewery.beers.forEach(beer => { %>
-          <li>
-            <a href="/beers/<%= beer._id %> "><%= beer.name %> </a>
-          </li>
-          <% }) %>
-        </ul>
-      </section>
+      <!-- Menu -->
+      <h3 class="label">All <%=brewery.name %> beers: <br /></h3>
+      <div class="block">
+        <aside class="menu">
+          <ul class="menu-list">
+            <li>
+              <a class="subtitle is-active" href="#"
+                >See a beer you like?
+                <strong class="has-text-white">Check it out. </strong>
+              </a>
+              <ul>
+                <% brewery.beers.forEach(beer => { %>
+                <li>
+                  <a href="/beers/<%= beer._id %> "><%= beer.name %> </a>
+                </li>
+                <% }) %>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <br /><br />
+
+      <!-- New Beer Button -->
+      <h3 class="label">
+        Didn't see your beer? <br />
+        <a href="/breweries/new" class="button is-link">Add New Beer!</a>
+      </h3>
     </main>
+    <br />
+
+    <!-- Delete Brewery Button -->
+    <form action="/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
+      <input class="button" disabled type="submit" value="Delete" />
+    </form>
   </body>
+
   <!-- Footer -->
   <%- include('../partials/footer.ejs') -%>
 </html>
