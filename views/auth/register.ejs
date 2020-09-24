@@ -4,15 +4,49 @@
     <%- include('../partials/head-links.ejs') -%>
     <title>Register</title>
   </head>
+
+  <!-- Nav Bar -->
+  <%- include('../partials/empty-navbar.ejs') -%>
+
+  <!-- Body -->
   <body>
-    <h1>Register a acount with The Hoptimists to stay up to date</h1>
+    <br /><br />
+    <h1 class="title is-3">Hi, let's create your account!</h1>
+    <h2 class="subtitle is-5 has-text-grey">
+      Provide the following to create your Hotpimist account:
+    </h2>
+
+    <!-- Form -->
     <form action="/register" method="POST">
       <input type="text" name="username" placeholder="Username" required />
       <input type="email" name="email" placeholder="email" required />
       <input type="password" name="password" placeholder="password" required />
       <input type="submit" value="Create Account" />
     </form>
+    <br><br><br>
+
+    <!-- Notification -->
+  <div class="block">
+    <div class="notification is-info has-background-link">
+      <p class="content is-3"> 
+        <strong>
+            By selecting to join Hoptimist you will gain full access to this
+            website and be able to write reviews for breweries and
+            their beers!         
+          <br><br>
+            If a brewery or beer hasn't been added to our database yet,
+            then, as a Hoptimist, you are able to create them. You'll also be able to see reviews from other Hoptimists! 
+        </strong>
+      </p>
+    </div>
+    <br>
+
+    <!-- Existing Member -->
+    <h3 class="subtitle has-text-grey">Already got an account?</h3>
+      <a href="/login" class="button is-link">Sign in</a>
+    </h3>
   </body>
+
   <!-- Footer -->
   <%- include('../partials/footer.ejs') -%>
 </html>
