@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/styles/main.css" />
-    <script src="/public/scripts/app.js" defer></script>
-    <title>Document</title>
+    <%- include('./partials/head-links.ejs') -%>
+    <title>Hoptimist | Home</title>
   </head>
-  <body></body>
+
+  <!-- Nav Bar -->
+  <%- include('./partials/home-page-navbar.ejs') -%>
+
+  <body>
+    <!-- Hero -->
+    <header class="is-family-monospace">
+      <section class="hero is-info has-background-primary-dark">
+        <div class="hero-body">
+          <div class="container">
+            <div class="title">Hoptimist</div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- Image  -->
+    <figure class="image is-5x3">
+      <img
+        src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Flive.staticflickr.com%2F65535%2F50295620092_c684ecc042_b.jpg"
+      />
+    </figure>
+  </body>
+
+  <!-- Footer -->
+  <%- include('./partials/home-page-footer.ejs') -%>
 </html>
