@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <%- include('../partials/head-links.ejs') -%>
-    <title>Login</title>
+    <title>Hoptimist | Login</title>
   </head>
 
   <!-- Nav Bar -->
@@ -10,15 +10,25 @@
 
   <!-- Body -->
   <body>
-    <a href="/register">Don't have an account click here</a>
-    <h1>Thanks for Coming Back!</h1>
+    <br />
+    <h1 class="title is-3 is-family-monospace">Thanks for Coming Back!</h1>
+    <br />
 
     <!-- Form -->
-    <form action="/login" method="POST">
-      <input type="email" name="email" placeholder="email" required />
-      <input type="password" name="password" placeholder="password" required />
-      <input type="submit" value="Login" />
-    </form>
+    <h2 class="label">Sign in</h2>
+    <div class="control"></div>
+      <form action="/login" method="POST">
+        <input class="input is-link" type="email" name="email" placeholder="email" required /><br />
+        <input class="input is-link" type="password" name="password" placeholder="password" required />
+        <br /><br />
+        <button class="button is-link">Login</button>
+      </form>
+    </div>
+    <br /><br />
+
+    <!-- New Member -->
+    <h3 class="label">Not a Hoptimist yet?</h3>
+    <a href="/register">Create Account</a>
   </body>
 
   <!-- Footer -->
