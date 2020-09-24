@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 // connection string
-const connectionString = "mongodb://localhost:27017/the-hoptimists";
+const connectionString =
+  process.env.MONGODB_URI || "mongodb://localhost:27017/the-hoptimists";
 
 //
 mongoose

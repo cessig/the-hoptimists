@@ -13,8 +13,10 @@ const controllers = require("./controllers");
 /* Instanced Modules */
 
 /* Configuration */
+/* All Use of DOTENV */
 
-const PORT = 4000;
+require("dotenv").config();
+const PORT = process.env.PORT || 4000;
 app.set("view engine", "ejs");
 
 /* middleware */
@@ -25,9 +27,10 @@ app.use(
   session({
     resave: false,
     saveUninitialized: false,
-    secret: "hopppy",
+    secret: "hops",
     store: new MongoStore({
-      url: "mongodb://localhost:27017/the-hoptimists",
+      url:
+        process.env.MONGODB_URI || "mongodb://localhost:27017/the-hoptimists",
     }),
     cookie: {
       maxAge: 1000 * 60 * 24 * 7 * 2,
@@ -62,5 +65,5 @@ app.use("/breweries", authRequried, controllers.brewery);
 /* Server Listener */
 
 app.listen(PORT, () => {
-  console.log(`Listening at http://localhost:${PORT}`);
+  console.log(`Listening at ${PORT}`);
 });
