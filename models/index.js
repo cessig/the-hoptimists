@@ -25,4 +25,5 @@ module.exports = {
   Beer: require("./Beer"),
   Brewery: require("./Brewery"),
   User: require("./User"),
+  Profile: require("./Profile"),
 };
