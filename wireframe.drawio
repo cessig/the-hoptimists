@@ -1,6 +1,6 @@
-<mxfile host="78878561-3b5a-48d6-bc66-a8d4251d6fc6" modified="2020-09-24T16:47:00.710Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="dVZeWWO_M7WAhFwk50xu" version="13.1.3">
+<mxfile host="78878561-3b5a-48d6-bc66-a8d4251d6fc6" modified="2020-09-24T16:47:22.530Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="aXlD-ih1ji6E1WDh9W2z" version="13.1.3">
     <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
-        <mxGraphModel dx="997" dy="2034" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1396" dy="2848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -125,10 +125,10 @@
                     <mxGeometry x="540" y="1150" width="200" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="42" value="&lt;b&gt;(stretch goal)&lt;/b&gt; when creating a beer: take name of beer, query of DB to check if it exists, if yes then send to beer page and notify user, or create beer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="1250" y="1490" width="260" height="20" as="geometry"/>
+                    <mxGeometry x="1050" y="420" width="260" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="43" value="&lt;b&gt;(stretch goal)&amp;nbsp;&lt;/b&gt;&amp;nbsp;&lt;span&gt;create a beer for a brewery and display list of existing beers, if not available then add your beer&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="1250" y="1400" width="260" height="20" as="geometry"/>
+                    <mxGeometry x="1050" y="330" width="260" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.012;entryY=0.103;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="45" target="55">
                     <mxGeometry relative="1" as="geometry"/>
@@ -140,10 +140,10 @@
                     <mxGeometry x="710" y="290" width="40" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="47" value="&lt;span id=&quot;docs-internal-guid-71849df3-7fff-c017-9060-932981379f20&quot;&gt;&lt;span style=&quot;font-size: 11pt; font-family: arial; background-color: transparent; font-weight: 700; vertical-align: baseline;&quot;&gt;Core functionality:&lt;/span&gt;&lt;span style=&quot;font-size: 11pt; font-family: arial; background-color: transparent; vertical-align: baseline;&quot;&gt; user be able to pick brewery, show list of brewery’s beers, select a specific beer, then user input to rate the beer + tasting notes, server will store information, and display tasting notes (stretch: display avg. rate)&lt;/span&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#F0F0F0;" vertex="1" parent="1">
-                    <mxGeometry x="1250" y="1180" width="260" height="20" as="geometry"/>
+                    <mxGeometry x="1050" y="110" width="260" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="48" value="User Story" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#F0F0F0;" vertex="1" parent="1">
-                    <mxGeometry x="1330" y="1090" width="70" height="20" as="geometry"/>
+                    <mxGeometry x="1130" y="20" width="70" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="49" value="DB&amp;nbsp; Model" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#F0F0F0;" vertex="1" parent="1">
                     <mxGeometry x="689" y="20" width="70" height="20" as="geometry"/>
@@ -161,7 +161,7 @@
                     <mxGeometry x="770" y="110" width="160" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="54" value="&lt;b&gt;(stretch goal)&amp;nbsp;&lt;/b&gt;&amp;nbsp;user signup with email for weekly newsletter + updates/ events" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="1250" y="1330" width="260" height="20" as="geometry"/>
+                    <mxGeometry x="1050" y="260" width="260" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="55" value="One Beer" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="765" y="360" width="160" height="140" as="geometry"/>
