@@ -18,12 +18,13 @@ Have users be able to create breweries. Within each brewery users can create bee
 
 ## Stretch Goals
 
-- hj
-- hj
+- creating log in and log out for users
+- making application accessible only to logged in users
+- Advanced stylization
 
 ## Technologies Used
 
-- Node
+- Node.js
 - Express
 - MongoDB
 - Mongoose
