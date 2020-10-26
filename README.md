@@ -21,3 +21,4 @@ In each brewery, users are able to view any beers that have been reviewed for th
 ## Stretch Goals
 
 ## Technologies Used
+# hoptimist2-api
